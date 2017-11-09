@@ -29,12 +29,12 @@ USER flowdroid
 WORKDIR /home/flowdroid
 
 # Download dependencies
-RUN wget -c 'https://soot-build.cs.uni-paderborn.de/public/origin/develop/soot/soot-develop/build/sootclasses-trunk-jar-with-dependencies.jar' && \
-	wget -c 'https://github.com/secure-software-engineering/soot-infoflow/releases/download/FlowDroid_1.5/soot-infoflow.jar' && \
-	wget -c 'https://github.com/secure-software-engineering/soot-infoflow-android/releases/download/FlowDroid_1.5/soot-infoflow-android.jar' && \
-	wget -c 'https://mvnrepository.com/artifact/org.slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar' && \
-	wget -c 'https://mvnrepository.com/artifact/org.slf4j/slf4j-simple/1.7.5/slf4j-simple-1.7.5.jar' && \
-	wget -c 'https://github.com/secure-software-engineering/soot-infoflow-android/raw/develop/lib/axml-2.0.jar' 
+RUN wget -c 'https://soot-build.cs.uni-paderborn.de/public/origin/develop/soot/soot-develop/build/sootclasses-trunk-jar-with-dependencies.jar'
+RUN wget -c 'https://github.com/secure-software-engineering/soot-infoflow/releases/download/FlowDroid_1.5/soot-infoflow.jar'
+RUN wget -c 'https://github.com/secure-software-engineering/soot-infoflow-android/releases/download/FlowDroid_1.5/soot-infoflow-android.jar'
+RUN wget -c 'http://central.maven.org/maven2/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar'
+RUN wget -c 'http://central.maven.org/maven2/org/slf4j/slf4j-simple/1.7.5/slf4j-simple-1.7.5.jar'
+RUN wget -c 'https://github.com/secure-software-engineering/soot-infoflow-android/raw/develop/lib/axml-2.0.jar' 
 
 # Download sinks, sources and callbacks
 RUN wget -c 'https://github.com/secure-software-engineering/soot-infoflow/raw/develop/EasyTaintWrapperSource.txt' && \

@@ -30,7 +30,7 @@ WORKDIR /home/flowdroid
 
 # Download dependencies
 RUN wget -c 'https://soot-build.cs.uni-paderborn.de/public/origin/develop/soot/soot-develop/build/sootclasses-trunk-jar-with-dependencies.jar'
-RUN wget -c 'https://github.com/secure-software-engineering/soot-infoflow/releases/tag/FlowDroid_2.0/soot-infoflow.jar'
+RUN wget -c 'https://github.com/secure-software-engineering/soot-infoflow/releases/download/FlowDroid_2.0/soot-infoflow.jar'
 RUN wget -c 'https://github.com/secure-software-engineering/soot-infoflow-android/releases/download/FlowDroid_2.0/soot-infoflow-android.jar'
 RUN wget -c 'http://central.maven.org/maven2/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar'
 RUN wget -c 'http://central.maven.org/maven2/org/slf4j/slf4j-simple/1.7.5/slf4j-simple-1.7.5.jar'

@@ -5,7 +5,7 @@ RUN useradd -ms /bin/bash flowdroid
 
 # Install all dependencies
 RUN apt-get update && \
-    apt-get install -y unzip wget openjdk-7-jre-headless libc6-i386 lib32stdc++6 lib32z1 && \
+    apt-get install -y unzip wget openjdk-8-jre-headless libc6-i386 lib32stdc++6 lib32z1 && \
     apt-get -y install bash-completion python2.7 python-dev python-protobuf python-openssl python-twisted && \
     apt-get clean && \
     apt-get autoclean && \

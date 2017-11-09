@@ -29,7 +29,7 @@ USER flowdroid
 WORKDIR /home/flowdroid
 
 # Download dependencies
-RUN wget -c 'http://soot-build.cs.uni-paderborn.de/nightly/soot/soot-trunk.jar' && \
+RUN wget -c 'https://soot-build.cs.uni-paderborn.de/public/origin/develop/soot/soot-develop/build/sootclasses-trunk-jar-with-dependencies.jar' && \
 	wget -c 'https://github.com/secure-software-engineering/soot-infoflow/releases/download/FlowDroid_1.5/soot-infoflow.jar' && \
 	wget -c 'https://github.com/secure-software-engineering/soot-infoflow-android/releases/download/FlowDroid_1.5/soot-infoflow-android.jar' && \
 	wget -c 'https://github.com/secure-software-engineering/soot-infoflow-android/raw/develop/lib/slf4j-api-1.7.5.jar' && \
@@ -42,4 +42,4 @@ RUN wget -c 'https://github.com/secure-software-engineering/soot-infoflow/raw/de
 	wget -c 'https://github.com/secure-software-engineering/soot-infoflow-android/raw/develop/AndroidCallbacks.txt'
 
 # Alias for Flowdroid
-RUN echo "alias flowdroid='java -Xmx4g -cp .:soot-trunk.jar:soot-infoflow.jar:soot-infoflow-android.jar:slf4j-api-1.7.5.jar:slf4j-simple-1.7.5.jar:axml-2.0.jar soot.jimple.infoflow.android.TestApps.Test'" >> /home/flowdroid/.bashrc
+RUN echo "alias flowdroid='java -Xmx4g -cp .:sootclasses-trunk-jar-with-dependencies.jar:soot-infoflow.jar:soot-infoflow-android.jar:slf4j-api-1.7.5.jar:slf4j-simple-1.7.5.jar:axml-2.0.jar soot.jimple.infoflow.android.TestApps.Test'" >> /home/flowdroid/.bashrc

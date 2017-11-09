@@ -1,6 +1,6 @@
 # Flowdroid
 
 This is a docker file for Flowdroid
-1) Pull the repository ```docker pull frenchyeti/flowdroid```
-2) Start container ```docker run -it --rm -v /home/test:/opt/flowdroid frenchyeti/flowdroid:1.5 bash```
+1) Pull the repository ```docker pull maqsoodahmad/flowdroid-docker```
+2) Start container ```docker run -it --rm -v /path-to/the-dir/containing-apks/:/opt/flowdroid frenchyeti/flowdroid bash```
 3) Run Flowdroid ```~$ flowdroid /opt/flowdroid/demo.apk /opt/android-sdk-linux/platforms/android-7.0/android.jar```
